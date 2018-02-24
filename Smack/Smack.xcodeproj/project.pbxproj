@@ -14,6 +14,7 @@
 		B4D735EE203EAE4D00CB0115 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D735ED203EAE4D00CB0115 /* SWRevealViewController.m */; };
 		B4D735F3203FF05500CB0115 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D735F2203FF05500CB0115 /* ChatVC.swift */; };
 		B4D735F5203FF06100CB0115 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D735F4203FF06100CB0115 /* ChannelVC.swift */; };
+		B4D735F720412C5800CB0115 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D735F620412C5800CB0115 /* GradientView.swift */; };
 		C5425FDC5C6509ED2251CD40 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959FE61199421FF92F859F72 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		B4D735ED203EAE4D00CB0115 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B4D735F2203FF05500CB0115 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		B4D735F4203FF06100CB0115 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		B4D735F620412C5800CB0115 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		B4D735F0203FF03A00CB0115 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4D735F620412C5800CB0115 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				B4D735F5203FF06100CB0115 /* ChannelVC.swift in Sources */,
 				B4D735F3203FF05500CB0115 /* ChatVC.swift in Sources */,
+				B4D735F720412C5800CB0115 /* GradientView.swift in Sources */,
 				B4A86184203EA38200C6AC0B /* AppDelegate.swift in Sources */,
 				B4D735EE203EAE4D00CB0115 /* SWRevealViewController.m in Sources */,
 			);
