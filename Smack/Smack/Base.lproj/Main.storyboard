@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="121" width="375" height="431"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z7D-xk-PVf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="z7D-xk-PVf" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z7D-xk-PVf" id="Hvp-Un-m5b">
@@ -153,6 +153,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="8rm-IR-uCQ" id="P4S-wH-tJ4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -178,6 +181,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="H6t-XN-ovT" id="sbV-bN-Hde"/>
+                        <outlet property="tableView" destination="LFd-Uf-8Bc" id="a53-Xx-fhc"/>
                         <outlet property="userImg" destination="9gn-hp-o6b" id="9BP-rw-jVK"/>
                         <segue destination="qqY-Ag-j4p" kind="show" identifier="toLogin" id="WGo-cr-EbR"/>
                     </connections>
@@ -288,15 +292,24 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="qqY-Ag-j4p" eventType="touchUpInside" id="zcf-57-ZAN"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-bA-eEk">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Qka-Wd-Eu1" secondAttribute="trailing" id="0fi-7g-tw8"/>
                             <constraint firstItem="Qka-Wd-Eu1" firstAttribute="top" secondItem="4dl-GX-Cp4" secondAttribute="top" constant="8" id="6xU-2v-F5G"/>
                             <constraint firstItem="00e-sB-JQi" firstAttribute="centerX" secondItem="rVI-i2-d1o" secondAttribute="centerX" id="H9t-ql-rYs"/>
+                            <constraint firstItem="fVm-bA-eEk" firstAttribute="centerY" secondItem="rVI-i2-d1o" secondAttribute="centerY" constant="-100" id="Mc4-ut-VN3"/>
                             <constraint firstItem="T48-Vh-57g" firstAttribute="centerX" secondItem="rVI-i2-d1o" secondAttribute="centerX" id="QaF-OO-7wM"/>
                             <constraint firstItem="RnY-Bs-Rmp" firstAttribute="centerX" secondItem="rVI-i2-d1o" secondAttribute="centerX" id="RUO-sX-c48"/>
+                            <constraint firstItem="fVm-bA-eEk" firstAttribute="centerX" secondItem="rVI-i2-d1o" secondAttribute="centerX" id="WEX-CE-DPc"/>
                             <constraint firstItem="RnY-Bs-Rmp" firstAttribute="top" secondItem="4dl-GX-Cp4" secondAttribute="top" constant="60" id="ZyC-V3-Xtu"/>
                             <constraint firstItem="W7M-wh-ymr" firstAttribute="top" secondItem="00e-sB-JQi" secondAttribute="bottom" constant="40" id="fLd-iH-D6v"/>
                             <constraint firstItem="00e-sB-JQi" firstAttribute="top" secondItem="RnY-Bs-Rmp" secondAttribute="bottom" constant="40" id="iB5-t0-P7k"/>
@@ -306,6 +319,9 @@
                         <viewLayoutGuide key="safeArea" id="4dl-GX-Cp4"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="lvQ-mW-LCG" id="HkW-z8-wLh"/>
+                        <outlet property="spinner" destination="fVm-bA-eEk" id="Phs-g9-hFg"/>
+                        <outlet property="usernameTxt" destination="LB1-Dc-E7I" id="WbD-YJ-dzG"/>
                         <segue destination="exJ-0F-ths" kind="show" identifier="toCreateAccount" id="UBu-CS-6OM"/>
                     </connections>
                 </viewController>
